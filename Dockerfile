@@ -1,4 +1,5 @@
 FROM nginx:latest
+LABEL com.centurylinklabs.watchtower.enable=false
 RUN rm -f /etc/nginx/conf.d/default.conf
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY index.html /www/index.html
